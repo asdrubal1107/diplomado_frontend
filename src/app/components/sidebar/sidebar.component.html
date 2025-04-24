@@ -1,0 +1,26 @@
+<div class="d-flex">
+
+    <nav class="sidebar" [class.collapsed]="isCollapsed">
+      
+      <!-- Sección superior con la foto y nombre de la institución -->
+      <div class="section" >
+
+        <button (click)="toggleSidebar()" class="btn btn-secondary toggle-btn-collapsed">
+          <i class="bi" [ngClass]="isCollapsed ? 'bi-arrow-right' : 'bi-arrow-left'"></i>
+        </button>
+
+      </div>
+
+  
+      <!-- Menú del sidebar -->
+      <ul class="list-unstyled">
+        <li><a routerLink="/main/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-house"></i> <span *ngIf="!isCollapsed">Home</span></a></li>
+        <li><a routerLink="/main/profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-person-fill"></i> <span *ngIf="!isCollapsed">Perfil</span></a></li>
+        <li><a routerLink="/main/users" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-people-fill"></i> <span *ngIf="!isCollapsed">Usuarios</span></a></li>
+      </ul>
+    </nav>
+  
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

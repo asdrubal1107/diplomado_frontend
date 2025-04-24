@@ -1,0 +1,44 @@
+/* Estilo general del header */
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Color de fondo del header */
+  padding: 0 20px 0 0;
+  height: 50px;
+}
+
+/* Estilo de la foto de perfil */
+.profile-photo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Estilo del nombre del usuario */
+.user-name {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; /* Evita que el texto se salga del contenedor */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo del botón de menú desplegable */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.dropdown-toggle i {
+  font-size: 1rem;
+}
+  
+  /* Estilo para el ícono de mensajes */
+.btn-link {
+  color: #333;
+  text-decoration: none;
+}

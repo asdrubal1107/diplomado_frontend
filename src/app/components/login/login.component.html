@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center vh-100">
+    <div class="col-md-5">
+      <div class="login-container p-5"> <!-- Contenedor con fondo y padding -->
+
+        <!-- Título -->
+        <h3 class="text-center mb-4">Bienvenido/a</h3>
+        
+        <!-- Formulario -->
+        <form [formGroup]="authForm">
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              id="email" 
+              placeholder="Ingresa tu usuario" 
+              formControlName="email">
+          </div>
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input 
+              type="password" 
+              class="form-control" 
+              id="password" 
+              placeholder="Ingresa tu contraseña" 
+              formControlName="password">
+          </div>
+          
+          <!-- Error de validación -->
+          <div *ngIf="formInvalid" class="alert alert-danger text-center mt-3">
+            Usuario o Contraseña Incorrectos.
+          </div>
+          
+          <!-- Botón de inicio de sesión -->
+          <div class="d-grid mt-4">
+            <button class="btn btn-primary btn-block" (click)="login()">Iniciar Sesión</button>
+          </div>
+
+          <div class="text-center mt-3">
+            <small>¿No tienes una cuenta? <a routerLink="/signup">Registrate</a></small>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

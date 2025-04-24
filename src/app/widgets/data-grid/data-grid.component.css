@@ -1,0 +1,131 @@
+/* Estilos de la tabla */
+.table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+/* Bordes generales */
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+/* Estilo para los encabezados */
+.table thead th {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Estilo para las celdas del cuerpo */
+.table tbody tr td {
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+/* Borde izquierdo y derecho */
+.table tbody tr td:first-child {
+    border-left: 1px solid #ddd;
+}
+.table tbody tr td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Transición para hover */
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en las filas */
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsividad */
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Espaciado de elementos */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Espaciado entre botones */
+.d-flex button {
+    margin: 0 5px; /* Margen horizontal entre botones */
+}
+
+/* Paginación */
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center; /* Centrado horizontal */
+}
+
+/* Botones del paginador */
+.pagination .page-item {
+    cursor: pointer;
+}
+
+.pagination .page-item.disabled .page-link {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+/* Modales */
+.modal-content {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Texto centrado */
+.text-center {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+/* Bordes personalizados para la tabla */
+.table-bordered {
+    border: 1px solid #ddd;
+    border-spacing: 0;
+}
+
+.table thead th, 
+.table tbody td {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.table thead th:last-child, 
+.table tbody td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Truncar texto dentro de celdas */
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Estilo para el tooltip (opcional) */
+  td span[title] {
+    cursor: pointer;
+  }
