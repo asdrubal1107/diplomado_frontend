@@ -7,6 +7,7 @@ import { AuthGuard }                                 from 'src/app/guards/auth.g
 import { MainComponent }                             from 'src/app/components/main/main.component';
 import { HomeComponent }                             from 'src/app/components/home/home.component';
 import { ProfileComponent }                          from 'src/app/components/profile/profile.component';
+import { UsersComponent }                            from 'src/app/components/users/users.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent
+      },
+      {
+        path: 'users',
+        component: UsersComponent
       }
     ]
   }

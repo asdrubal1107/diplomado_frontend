@@ -1,0 +1,78 @@
+<div class="header-container">
+    <button type="button" class="btn btn-primary" (click)="getDataGrid()">
+        <i class="bi bi-arrow-repeat"></i> Buscar
+    </button>
+  </div>
+  
+  <!-- Filtros -->
+  <div class="container">
+    
+      <form class="row g-3 align-items-end filters-container">
+    
+          <div class="col-md-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              [(ngModel)]="filters.nombre"
+              name="nombreFilter"
+              class="form-control"
+            />
+          </div>
+  
+          <div class="col-md-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input
+              type="text"
+              id="usuario"
+              [(ngModel)]="filters.usuario"
+              name="usuarioFilter"
+              class="form-control"
+            />
+          </div>
+    
+          <div class="col-md-3">
+            <label for="correo" class="form-label">Correo</label>
+            <input
+              type="text"
+              id="correo"
+              [(ngModel)]="filters.correo"
+              name="correoFilter"
+              class="form-control"
+            />
+          </div>
+    
+          <div class="col-md-3">
+            <label for="phoneNumber" class="form-label">Celular</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              [(ngModel)]="filters.phoneNumber"
+              name="phoneNumberFilter"
+              class="form-control"
+            />
+          </div>
+  
+          <div class="col-md-3">
+            <label for="address" class="form-label">Dirección</label>
+            <input
+              type="text"
+              id="address"
+              [(ngModel)]="filters.address"
+              name="address"
+              class="form-control"
+            />
+          </div>
+      
+      </form>
+  </div>
+    
+  <!-- Contenedor del Datatable -->
+  <div class="table-container mt-4">
+      <app-data-grid #dataGrid
+                     [columns]="gridColumns"
+                     [data]="filteredData"
+                     [showSelector]="true"
+                     [showEdit]="false"
+      ></app-data-grid>
+  </div>

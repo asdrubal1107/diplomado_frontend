@@ -22,6 +22,7 @@ import { ProfileComponent }                               from './components/pro
 
 import { DataGridComponent }                              from './widgets/data-grid/data-grid.component';
 import { ModalComponent }                                 from './widgets/modal/modal.component';
+import { UsersComponent }                                 from './components/users/users.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ModalComponent }                                 from './widgets/modal/
     SidebarComponent,
     ModalComponent,
     ProfileComponent,
-    DataGridComponent
+    DataGridComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
