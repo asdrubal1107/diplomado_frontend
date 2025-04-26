@@ -42,6 +42,8 @@ export class LoginComponent implements OnInit {
           this.authService.usuario = data.user;
           this.authService.logued = true;
           this.authService.loggedIn.next(true);
+          console.log(localStorage.getItem("user"));
+          console.log("TOKEN: " + data.token);
           this.router.navigate(['/main/home']);
       },
       error => {

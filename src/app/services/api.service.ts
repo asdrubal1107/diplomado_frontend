@@ -3,13 +3,14 @@ import { catchError, Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
 import { NotificationsService } from './notifications.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = environment.apiUrl + '/users';
 
   constructor(private http: HttpClient,
               private authService: AuthService,

@@ -45,6 +45,7 @@ export class RegisterComponent implements OnInit {
           this.authService.usuario = data.user;
           this.authService.logued = true;
           this.authService.loggedIn.next(true);
+          console.log(localStorage.getItem("user"));
           this.router.navigate(['/main/home']);
 
         },

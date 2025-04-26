@@ -9,7 +9,7 @@ import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 })
 export class AuthService {
 
-  private tokenKey = 'token';
+  private tokenKey = 'bd6ccbce08991570d76153cdcd3946e45aa69c8dd9d7518a4d717a2aa1deecdd';
 
   loggedIn = new BehaviorSubject<boolean>(false);
 
@@ -22,7 +22,7 @@ export class AuthService {
     return this.loggedIn.asObservable();
   }
 
-  private apiUrl = 'http://localhost:3000/api/auth';
+  private apiUrl = environment.apiUrl + '/auth';
 
   menuItems = ['Ingresar']; // Agrega los nombres de los elementos del menú aquí
 
