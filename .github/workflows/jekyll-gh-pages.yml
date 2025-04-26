@@ -28,10 +28,10 @@ jobs:
           node-version: '16' # o la versión que uses
 
       - name: Install dependencies
-        run: npm install
+        run: src/npm install
 
       - name: Build Angular app
-        run: npm run build -- --configuration production
+        run: src/npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
